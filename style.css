@@ -10,6 +10,14 @@ body {
   min-height: 100vh;
   padding: 20px;
   color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
 }
 
 .main-wrapper {
@@ -351,38 +359,178 @@ button:active {
   }
 }
 
-@media (max-width: 600px) {
-  .container {
+@media (max-width: 768px) {
+  .main-wrapper {
+    gap: 15px;
+  }
+  
+  .container.main-content {
     padding: 20px;
     border-radius: 16px;
+  }
+  
+  .overall-section {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  .overall-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+  
+  .input-group {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  input[type="text"] {
+    padding: 12px 16px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    width: 100%;
+    min-height: 44px; /* Touch-friendly size */
+  }
+  
+  .task {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    padding: 15px;
+  }
+  
+  .task span {
+    word-break: break-word;
+  }
+  
+  .task button {
+    margin-left: 0;
+    margin-right: 6px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  #calendarSection {
+    padding: 20px;
+    margin-top: 25px;
+  }
+  
+  #calendarSection label {
+    display: block;
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+  
+  #calendarSection select {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 12px;
+    padding: 12px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+  
+  #calendar {
+    gap: 4px;
+    padding: 10px;
+    margin-top: 15px;
+  }
+  
+  #calendar div {
+    padding: 8px 4px;
+    font-size: 0.85rem;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #summary {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  #taskGraphSection {
+    margin-top: 25px;
+    padding: 20px;
+  }
+  
+  #taskGraphSection h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  #taskGraphSection canvas,
+  .graph-card canvas {
+    max-height: 280px;
+  }
+  
+  .graph-card {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .graph-card h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+  
+  .container.main-content {
+    padding: 15px;
+  }
+  
+  .overall-section {
+    padding: 15px;
   }
   
   h1 {
     font-size: 1.5rem;
   }
   
-  .input-group {
-    flex-direction: column;
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  .overall-section h2 {
+    font-size: 1.2rem;
   }
   
   #calendar {
-    gap: 6px;
-    padding: 10px;
+    gap: 3px;
+    padding: 8px;
   }
   
   #calendar div {
-    padding: 10px 0;
-    font-size: 0.9rem;
+    padding: 6px 2px;
+    font-size: 0.8rem;
+    min-height: 32px;
   }
   
-  .task {
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-  }
-  
-  .task button {
-    margin-left: 0;
-    margin-right: 6px;
+  #taskGraphSection canvas,
+  .graph-card canvas {
+    max-height: 250px;
   }
 }
