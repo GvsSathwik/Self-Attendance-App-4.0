@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #1f2937;
+}
+
+.main-wrapper {
+  display: flex;
+  gap: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.container.main-content {
+  flex: 1;
+  max-width: 700px;
+  margin: 0;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #4f46e5;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+h2 {
+  color: #4f46e5;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Input Section */
+.input-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  background-color: #f9fafb;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Task List */
+#taskList {
+  margin-bottom: 35px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 18px 20px;
+  border-left: 4px solid #3b82f6;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #1e40af;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.task:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.task button {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  margin-left: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.3);
+}
+
+.task button:hover {
+  background-color: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+}
+
+.task-edit-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 2px solid #6366f1;
+  border-radius: 8px;
+  font-size: inherit;
+  font-weight: 600;
+  color: #1e40af;
+  background-color: white;
+  outline: none;
+}
+
+/* Calendar Section */
+#calendarSection {
+  margin-top: 35px;
+  padding: 30px;
+  background-color: #f9fafb;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+#calendarSection h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#calendarSection label {
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+#calendarSection select {
+  padding: 10px 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  margin-right: 18px;
+  margin-bottom: 15px;
+  background-color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#calendarSection select:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 25px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+#calendar div {
+  background-color: #ffffff;
+  border: 2px solid #e5e7eb;
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+#calendar div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#calendar div.present {
+  background: linear-gradient(135deg, #a7f3d0 0%, #10b981 100%);
+  border-color: #10b981;
+  color: #065f46;
+}
+
+#calendar div.absent {
+  background: linear-gradient(135deg, #fecaca 0%, #ef4444 100%);
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+#summary {
+  margin-top: 25px;
+  font-weight: 700;
+  text-align: center;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: #1e40af;
+}
+
+#taskGraphSection {
+  margin-top: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#taskGraphSection h3 {
+  font-size: 1.2rem;
+  color: #4f46e5;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+#taskGraphSection canvas {
+  max-height: 350px;
+  margin: 0 auto;
+}
+
+/* Graph Sections */
+.graph-controls, .graph-controls-main {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.graph-controls-main {
+  margin-bottom: 25px;
+}
+
+.graph-controls button, .graph-controls-main button {
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+}
+
+.graph-controls button:hover, .graph-controls-main button:hover {
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+}
+
+/* Overall Graph Section - Right Side */
+.overall-section {
+  width: 500px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.overall-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  color: #4f46e5;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 20px;
+}
+
+.graph-card {
+  margin-bottom: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.graph-card:last-child {
+  margin-bottom: 0;
+}
+
+.graph-card h3 {
+  font-size: 1.1rem;
+  color: #4f46e5;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.graph-card canvas {
+  max-height: 250px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .main-wrapper {
+    flex-direction: column;
+  }
+  
+  .overall-section {
+    width: 100%;
+    position: relative;
+    top: 0;
+    max-height: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .input-group {
+    flex-direction: column;
+  }
+  
+  #calendar {
+    gap: 6px;
+    padding: 10px;
+  }
+  
+  #calendar div {
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+  
+  .task {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .task button {
+    margin-left: 0;
+    margin-right: 6px;
+  }
+}

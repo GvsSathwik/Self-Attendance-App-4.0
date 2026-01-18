@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Self Attendance</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="main-wrapper">
+    <div class="container main-content">
+      <h1>📅 Self Attendance</h1>
+      <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Enter new task..." />
+        <button onclick="addTask()">Add Task</button>
+      </div>
+      <div id="taskList"></div>
+
+      <div id="calendarSection" class="hidden">
+      <h2 id="selectedTaskTitle"></h2>
+      <label for="monthSelect">Select Month:</label>
+      <select id="monthSelect"></select>
+
+      <label for="yearSelect">Year:</label>
+      <select id="yearSelect"></select>
+
+      <div id="calendar"></div>
+      <div id="summary"></div>
+      <div id="taskGraphSection" class="hidden">
+        <h3>Task Performance</h3>
+        <canvas id="taskChart"></canvas>
+      </div>
+      </div>
+    </div>
+
+    <div id="overallGraphSection" class="overall-section">
+      <h2>📈 Analytics Dashboard</h2>
+      <div class="graph-card">
+        <h3>Overall Attendance</h3>
+        <canvas id="overallChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h3>Monthly Trend</h3>
+        <canvas id="monthlyTrendChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h3>Task Performance</h3>
+        <canvas id="taskPerformanceChart"></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
